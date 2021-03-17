@@ -4,6 +4,7 @@ import { useForm} from 'react-hook-form';
 import Formy from './FormStyle';
 import Button from "./Button" ;
 import ErrMsg from './components/ErrMsg';
+import { MARGIN_LEFT } from './styles';
 
 const FormVal = () => {
   const { errors, handleSubmit, register } = useForm();
@@ -27,15 +28,18 @@ const FormVal = () => {
   return(
     <Formy onSubmit={handleSubmit(onSubmit)}> {/*warning*/}
       <h3>Sign In</h3>
-      <label>Username</label>
-      <input name='userName' label='Username' placeholder='LemonJohn99' />
-      <label>Passphrase</label>
+      <label>Username:</label>
+      <input style={{ marginLeft: MARGIN_LEFT }} name='userName' label='Username' placeholder='LemonJohn99' />
+      <label style={{ marginLeft: MARGIN_LEFT }}>Passphrase:</label>
       {errors.passphrase && (
       <ErrMsg noBackground type='purple'>{errorHelp()}</ErrMsg>
       )}
-      <input name='passphrase' label='Passphrase' placeholder='******' required minLength="8" ref={register(
-        // {required: true }, validate: (val) => {input.length >= 8 }} // WONT FKOING WORK
-        )}
+      <input 
+        style={{ marginLeft: MARGIN_LEFT }}
+        name='passphrase'
+        label='Passphrase'
+        placeholder='******'
+        ref={register({required: true, validate:(val) => 'yo'  } ) }     
       />
       <Button>Submit</Button>
       {/* <Message
