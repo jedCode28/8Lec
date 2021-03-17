@@ -1,5 +1,7 @@
-import {useEffect} from 'react'
-import axios from 'axios'
+import {useEffect} from 'react';
+import axios from 'axios';
+import FormVal from '../FormVal';
+
 
 export default ()=>{
     useEffect(()=>{
@@ -18,6 +20,7 @@ export default ()=>{
     return(
         <>
           <h1>Home</h1>
+          <FormVal />
         </>
     )
 }
