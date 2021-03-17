@@ -30,9 +30,13 @@ const FormVal = () => {
       <label>Username</label>
       <input name='userName' label='Username' placeholder='LemonJohn99' />
       <label>Passphrase</label>
-      {errors.passphrase && (<ErrMsg noBackground type='purple'>{errorHelp()}</ErrMsg>)}
-      <input name='passphrase' label='Passphrase' placeholder='******' ref={
-        register({required: true, validate:(val)=>val.split('').filter((word) => word.length >=8 )})}/>
+      {errors.passphrase && (
+      <ErrMsg noBackground type='purple'>{errorHelp()}</ErrMsg>
+      )}
+      <input name='passphrase' label='Passphrase' placeholder='******' required minLength="8" ref={register(
+        // {required: true }, validate: (val) => {input.length >= 8 }} // WONT FKOING WORK
+        )}
+      />
       <Button>Submit</Button>
       {/* <Message
         // warning
