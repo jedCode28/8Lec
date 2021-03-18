@@ -39,12 +39,30 @@ const FormVal = () => {
         name='passphrase'
         label='Passphrase'
         placeholder='******'
-        ref={register({required: true, validate:(val) => 'yo'  } ) }     
+        // ref={register({required: true, validate:(val) => 'yo'  } ) }     // CANT FIGURE THIS OUT
       />
+      
+
+      {/* const passCheck(passphrase) {
+        pswd = /^(?=.*[0-9])(?=.{8,})$;
+        if(passphrase.value.match(pswd)){          // NONE OF THIS WORKS 
+          alert(YES)
+          return true;
+        } else {
+          alert(NO)
+          return false;
+        }
+      } */}
+
+{/* (?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])               THE DAMN COMPUTER HATES THIS SHIT */}
+
+      {/* (?=.*[0-9])	Must contain at least 1 numeric character from 0 to 9.
+      (?=.*[!@#$%^&*])	Must contain at least one special character.         // REFERENCE
+      (?=.{8,})	Must be eight characters or longer string  */}
       <Button>Submit</Button>
       {/* <Message
         // warning
-        header='Could you check something!'
+        header='Could you check something!'       // SEMANTIC, CANT USE 
         list={[
           'Your shits all fucked, yo',
         ]}
