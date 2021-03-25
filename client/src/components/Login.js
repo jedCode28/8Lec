@@ -8,7 +8,7 @@ const Login = (props) => {
   const { handleLogin, authLoading, authErrors, setAuthErrors } = useContext(AuthContext);
 
   useEffect(() => {
-    setAuthErrors([]);
+    setAuthErrors([])
   }, []);
 
   const handleSubmit = (e) => {

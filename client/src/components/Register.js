@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect} from 'react'
 import { Button, Form, Header, Segment } from 'semantic-ui-react';
 import { AuthContext } from '../providers/AuthProvider'
 import { useFormInput } from './useFormInputHook';
@@ -12,7 +12,7 @@ const Register = ( {history} ) => {
 
   useEffect(() =>{
     setAuthErrors([]);
-  }, []);
+  },[]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
