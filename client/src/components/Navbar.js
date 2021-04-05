@@ -39,17 +39,28 @@ const NavBar = (props) => {
                 <Link to='/'>
                     <Menu.Item name="home" id="home" active={pathname=== '/'} />
                 </Link>
-                {rightNavItems()}
-                {/* <Link to='/about'>
+                
+                <Link to='/about'>
                     <Menu.Item active={pathname=== '/about'}>
                         about
                 </Menu.Item>
                 </Link>
-                <Link to={{pathname:'/passdata/1', thingToPass:'Hello'}}>
+                <Link to='/ThingX'>
+                    <Menu.Item active={pathname=== '/ThingX'}>
+                        ThingX.js
+                </Menu.Item>
+                </Link>
+                <Link to='/StuffXX'>
+                    <Menu.Item active={pathname=== '/StuffXX'}>
+                        StuffXX.js
+                </Menu.Item>
+                </Link>
+                {/* <Link to={{pathname:'/passdata/1', thingToPass:'Hello'}}>
                     <Menu.Item>
                         pass data demo
                 </Menu.Item>
                 </Link> */}
+                {rightNavItems()}
             </Menu>
         </div>
     );

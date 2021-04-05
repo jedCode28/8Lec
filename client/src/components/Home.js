@@ -6,6 +6,6 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => (
-    <Header as="h3" textAlign="center">Welcome to MySpace</Header>
+    <Header as="h3" textAlign="center">Welcome to My Home.js</Header>
 )
 export default Home;

@@ -9,6 +9,9 @@ import Login from './components/Login';
 import Register from './components/Register';
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
+import About from './components/pages/About';
+import ThingX from './components/pages/ThingX';
+import StuffXX from './components/pages/StuffXX';
 
 const App = () => (
     <Fragment>
@@ -17,6 +20,9 @@ const App = () => (
         <Container>
           <Switch>
             <ProtectedRoute exact path='/' component={Home}/>
+            <Route exact path='/about' component={ About } />
+            <Route exact path='/ThingX' component={ ThingX } />
+            <Route exact path='/StuffXX' component={ StuffXX } />
             <Route exact path='/login' component={ Login } />
             <Route exact path='/register' component={Register}/>
             <Route component={NoMatch}/>
